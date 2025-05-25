@@ -256,58 +256,33 @@ app.post("/cadastrofornecedor", (requisicao, resposta) => {
                                                 }
                                             conteudo = conteudo + `</div>
                                             <div class="form-group col-md-4">`;
-                                                if (!estado) {
+                                                if (!estado ) {
                                                     conteudo = conteudo + `
-                                                            <label for="inputEstado">Estado</label>
-                                                            <select id="inputEstado" name="estado" <select class="form-select is-invalid">>
-                                                                <option selected value="">Escolher...</option>
-                                                                <option value="AC">AC</option><option value="AL">AL</option><option value="AP">AP</option>
-                                                                <option value="AM">AM</option><option value="BA">BA</option><option value="CE">CE</option>
-                                                                <option value="DF">DF</option><option value="ES">ES</option><option value="GO">GO</option>
-                                                                <option value="MA">MA</option><option value="MT">MT</option><option value="MS">MS</option>
-                                                                <option value="MG">MG</option><option value="PA">PA</option><option value="PB">PB</option>
-                                                                <option value="PR">PR</option><option value="PE">PE</option><option value="PI">PI</option>
-                                                                <option value="RJ">RJ</option><option value="RN">RN</option><option value="RS">RS</option>
-                                                                <option value="RO">RO</option><option value="RR">RR</option><option value="SC">SC</option>
-                                                                <option value="SP">SP</option><option value="SE">SE</option><option value="TO">TO</option>
-                                                            </select>
-                                                            <div class="invalid-feedback">Escolha um estado</div>
-                                                         </div>
+                                                    <div class="col-md-2 mb-3">
+                                                        <label for="estado">UF</label>
+                                                        <select class="form-select" id="estado" name="estado">
+                                                            <option value="" selected>UF</option>
+                                                            <option value="SP">SP</option>
+                                                            <option value="RJ">RJ</option>
+                                                            <option value="MG">MG</option>
+                                                            <option value="RS">RS</option>
+                                                        </select>
+                                                        <p class="text-danger">Por favor informe a UF</p>
+                                                    </div>
                                                     `;
                                                 } else {
                                                     conteudo = conteudo + `
-                                                            <label for="inputEstado">Estado</label>
-                                                            <select id="inputEstado" name="estado" class="form-control">
-                                                                <option value="">Escolher...</option>
-                                                                <option value="AC" ${estado === 'AC' ? 'selected' : ''}>AC</option>
-                                                                <option value="AL" ${estado === 'AL' ? 'selected' : ''}>AL</option>
-                                                                <option value="AP" ${estado === 'AP' ? 'selected' : ''}>AP</option>
-                                                                <option value="AM" ${estado === 'AM' ? 'selected' : ''}>AM</option>
-                                                                <option value="BA" ${estado === 'BA' ? 'selected' : ''}>BA</option>
-                                                                <option value="CE" ${estado === 'CE' ? 'selected' : ''}>CE</option>
-                                                                <option value="DF" ${estado === 'DF' ? 'selected' : ''}>DF</option>
-                                                                <option value="ES" ${estado === 'ES' ? 'selected' : ''}>ES</option>
-                                                                <option value="GO" ${estado === 'GO' ? 'selected' : ''}>GO</option>
-                                                                <option value="MA" ${estado === 'MA' ? 'selected' : ''}>MA</option>
-                                                                <option value="MT" ${estado === 'MT' ? 'selected' : ''}>MT</option>
-                                                                <option value="MS" ${estado === 'MS' ? 'selected' : ''}>MS</option>
-                                                                <option value="MG" ${estado === 'MG' ? 'selected' : ''}>MG</option>
-                                                                <option value="PA" ${estado === 'PA' ? 'selected' : ''}>PA</option>
-                                                                <option value="PB" ${estado === 'PB' ? 'selected' : ''}>PB</option>
-                                                                <option value="PR" ${estado === 'PR' ? 'selected' : ''}>PR</option>
-                                                                <option value="PE" ${estado === 'PE' ? 'selected' : ''}>PE</option>
-                                                                <option value="PI" ${estado === 'PI' ? 'selected' : ''}>PI</option>
-                                                                <option value="RJ" ${estado === 'RJ' ? 'selected' : ''}>RJ</option>
-                                                                <option value="RN" ${estado === 'RN' ? 'selected' : ''}>RN</option>
-                                                                <option value="RS" ${estado === 'RS' ? 'selected' : ''}>RS</option>
-                                                                <option value="RO" ${estado === 'RO' ? 'selected' : ''}>RO</option>
-                                                                <option value="RR" ${estado === 'RR' ? 'selected' : ''}>RR</option>
-                                                                <option value="SC" ${estado === 'SC' ? 'selected' : ''}>SC</option>
-                                                                <option value="SP" ${estado === 'SP' ? 'selected' : ''}>SP</option>
-                                                                <option value="SE" ${estado === 'SE' ? 'selected' : ''}>SE</option>
-                                                                <option value="TO" ${estado === 'TO' ? 'selected' : ''}>TO</option>
-                                                            </select>
-                                                        </div>
+                                                    <div class="col-md-2 mb-3">
+                                                        <label for="estado">UF</label>
+                                                        <select class="form-select" id="estado" name="estado">
+                                                            <option value="" ${!estado ? 'selected' : ''}>UF</option>
+                                                            <option value="SP" ${estado === 'SP' ? 'selected' : ''}>SP</option>
+                                                            <option value="RJ" ${estado === 'RJ' ? 'selected' : ''}>RJ</option>
+                                                            <option value="MG" ${estado === 'MG' ? 'selected' : ''}>MG</option>
+                                                            <option value="RS" ${estado === 'RS' ? 'selected' : ''}>RS</option>
+                                                        </select>
+                                                        <p class="text-danger"></p>
+                                                    </div>
                                                     `;
                                                 }
                                                 conteudo = conteudo + `</div>
