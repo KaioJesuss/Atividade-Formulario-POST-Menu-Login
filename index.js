@@ -669,7 +669,7 @@ app.get("/", (requisicao, resposta)=>{
                                     }
 
                                     .form-control:focus {
-                                        background:rgb(250, 192, 255); 
+                                        background:rgb(98, 59, 105); 
                                         color: #fff;
                                         border-color: #4B0082;
                                         box-shadow: none;
